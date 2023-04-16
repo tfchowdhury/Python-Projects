@@ -7,7 +7,7 @@ def main():
 # Welcoming the player to the game
     
     print("\nHello! I'm Dr. Sheldon Cooper and I welcome you in this fun game")
-    print("called Rock-Paper-Scissors-Lizard-Spock")
+    print("called Rock-Paper-Scissors-Lizard-Spock [Press Enter to Play]")
     input()
     print("Allow me to introduce you to the rules: \n")
     print("Scissors cuts paper")
@@ -23,7 +23,7 @@ def main():
     print("Rock crushes scissors.")
 
     
-    user_action = input("\nEnter a choice: ")
+    user_action = input("\nEnter a choice: ").lower()
     possible_actions = ["rock", "paper", "scissors", "lizard", "spock"]
     sheldon_action = random.choice(possible_actions)
     print(f"\nYou chose {user_action}, Sheldon chose {sheldon_action}.\n")
@@ -107,12 +107,11 @@ def play_again():
     if another_game == 'yes':
         main()
     else:
-        print("\nSo you want to make me angry by not playing again?")
+        print("\nSo you want to make me angry by not playing again? [Enter]")
         input()
         print("... ...")
-        input()
         print("\nBazinga!")
-        print("\nHave a wonderful day!")
+        print("Have a wonderful day!")
         
 
 # Calling the main function
