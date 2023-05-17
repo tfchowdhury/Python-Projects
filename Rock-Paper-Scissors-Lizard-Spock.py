@@ -2,30 +2,34 @@
 
 import random
 
-def main():
-
 # Welcoming the player to the game
-    
-    print("\nHello! I'm Dr. Sheldon Cooper and I welcome you in this fun game")
-    print("called Rock-Paper-Scissors-Lizard-Spock [Press Enter to Play]")
-    input()
-    print("Allow me to introduce you to the rules: \n")
-    print("Scissors cuts paper")
-    print("Paper covers rock")
-    print("Rock crushes lizard")
-    print("Lizard poisons spock")
-    print("Spock smashes scissors")
-    print("Scissors decapitates lizard")
-    print("Lizard eats paper")
-    print("Paper disproves spock")
-    print("Spock vaporizes rock")
-    print("and as it always has,")
-    print("Rock crushes scissors.")
+
+print("\nHello! I'm Dr. Sheldon Cooper and I welcome you in this fun game")
+print("called Rock-Paper-Scissors-Lizard-Spock [Press Enter to Play]")
+input()
+print("Allow me to introduce you to the rules: \n")
+print("Scissors cuts paper")
+print("Paper covers rock")
+print("Rock crushes lizard")
+print("Lizard poisons spock")
+print("Spock smashes scissors")
+print("Scissors decapitates lizard")
+print("Lizard eats paper")
+print("Paper disproves spock")
+print("Spock vaporizes rock")
+print("and as it always has,")
+print("Rock crushes scissors.")
 
     
+def main():
+        
     user_action = input("\nEnter a choice: ").lower()
     possible_actions = ["rock", "paper", "scissors", "lizard", "spock"]
     sheldon_action = random.choice(possible_actions)
+
+    while user_action not in possible_actions:
+        user_action = input("Invalid choice. Please choose rock, paper, scissors, lizard, or spock: ").lower()
+                        
     print(f"\nYou chose {user_action}, Sheldon chose {sheldon_action}.\n")
     determine_winner(user_action, sheldon_action)
     play_again()
